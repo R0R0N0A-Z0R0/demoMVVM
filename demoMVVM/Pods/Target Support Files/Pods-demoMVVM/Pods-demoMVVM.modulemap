@@ -1,0 +1,6 @@
+module Pods_demoMVVM {
+  umbrella header "Pods-demoMVVM-umbrella.h"
+
+  export *
+  module * { export * }
+}

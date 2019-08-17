@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="demoMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3Z-GU-QJs">
+                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dxv-R1-wJi">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="296" id="Ans-Vr-czC" customClass="TableViewCell" customModule="demoMVVM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="296"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ans-Vr-czC" id="lfb-d7-Kp5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="295.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZV-7k-JHA">
+                                                    <rect key="frame" x="20" y="20" width="335" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="bpX-ku-4bp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-V9-1y4">
+                                                    <rect key="frame" x="20" y="60" width="335" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="r6J-Kb-wEg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zZV-7k-JHA" firstAttribute="centerX" secondItem="lfb-d7-Kp5" secondAttribute="centerX" id="7sh-4p-KO6"/>
+                                                <constraint firstItem="4NL-V9-1y4" firstAttribute="leading" secondItem="lfb-d7-Kp5" secondAttribute="leading" constant="20" id="AYA-fi-r53"/>
+                                                <constraint firstItem="zZV-7k-JHA" firstAttribute="top" secondItem="lfb-d7-Kp5" secondAttribute="top" constant="20" id="EHM-oT-HSC"/>
+                                                <constraint firstItem="zZV-7k-JHA" firstAttribute="leading" secondItem="lfb-d7-Kp5" secondAttribute="leading" constant="20" id="MWc-Nr-vcE"/>
+                                                <constraint firstItem="4NL-V9-1y4" firstAttribute="top" secondItem="zZV-7k-JHA" secondAttribute="bottom" constant="20" id="PqS-LD-1cc"/>
+                                                <constraint firstAttribute="trailing" secondItem="zZV-7k-JHA" secondAttribute="trailing" constant="20" id="PzN-5H-ccz"/>
+                                                <constraint firstItem="4NL-V9-1y4" firstAttribute="centerX" secondItem="lfb-d7-Kp5" secondAttribute="centerX" id="WDe-xz-wZV"/>
+                                                <constraint firstAttribute="trailing" secondItem="4NL-V9-1y4" secondAttribute="trailing" constant="20" id="qrW-Fp-0dY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="idLabel" destination="4NL-V9-1y4" id="g5b-LS-oUJ"/>
+                                            <outlet property="userNameLabel" destination="zZV-7k-JHA" id="C2h-mL-mrC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxv-R1-wJi" secondAttribute="trailing" id="JhQ-2e-li2"/>
+                            <constraint firstItem="H3Z-GU-QJs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Tid-u6-Gda"/>
+                            <constraint firstItem="H3Z-GU-QJs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UtL-FX-3sH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dxv-R1-wJi" secondAttribute="bottom" id="sem-fb-caO"/>
+                            <constraint firstItem="Dxv-R1-wJi" firstAttribute="top" secondItem="H3Z-GU-QJs" secondAttribute="bottom" id="tXg-Td-1vx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H3Z-GU-QJs" secondAttribute="trailing" constant="20" id="uw1-K1-bUC"/>
+                            <constraint firstItem="Dxv-R1-wJi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ykH-Ib-AZR"/>
+                            <constraint firstItem="H3Z-GU-QJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ztg-gl-c00"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchInputTextField" destination="H3Z-GU-QJs" id="4tV-lS-dLm"/>
+                        <outlet property="userTableView" destination="Dxv-R1-wJi" id="cnh-Lt-eKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162.40000000000001" y="13.943028485757123"/>
+        </scene>
+    </scenes>
+</document>
